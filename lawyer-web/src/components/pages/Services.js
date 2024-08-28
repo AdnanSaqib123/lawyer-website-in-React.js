@@ -21,7 +21,7 @@ const Services = () => {
                         <div className="card-body">
                             <h5 className="card-title">Business Law</h5>
                             <p className="card-text text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique
+                                We provide expert business law services, helping clients navigate contracts, compliance, and disputes while protecting their interests and ensuring legal success.
                             </p>
                         </div>
                     </div>
@@ -32,7 +32,7 @@ const Services = () => {
                         <div className="card-body">
                             <h5 className="card-title">Tax Law</h5>
                             <p className="card-text text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique
+                                We offer expert tax law services, guiding clients through planning, compliance, and disputes to minimize tax liabilities and protect their interests.
                             </p>
                         </div>
                     </div>
@@ -43,12 +43,12 @@ const Services = () => {
                         <div className="card-body">
                             <h5 className="card-title">Real Estate Law</h5>
                             <p className="card-text text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique
+                                We provide expert real estate law services, assisting clients with transactions, disputes, and regulatory matters to protect their property interests and ensure legal compliance.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div className='row g-3 d-flex' style={{ marginTop: '10%' }}>
+                <div className='row g-3 d-flex below-3-col' style={{ marginTop: '15%' }}>
 
                     <div className="col-md-4">
                         <div className="card h-100 service-card"
@@ -57,7 +57,7 @@ const Services = () => {
                         <div className="card-body">
                             <h5 className="card-title">Health Law</h5>
                             <p className="card-text text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique
+                                We offer expert health law services, guiding clients through regulatory compliance, disputes, and legal issues within the healthcare industry to safeguard their interests.
                             </p>
                         </div>
                     </div>
@@ -68,7 +68,7 @@ const Services = () => {
                         <div className="card-body">
                             <h5 className="card-title">Personal Injury Law</h5>
                             <p className="card-text text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique
+                                We offer expert personal injury law services, advocating for clients to secure fair compensation while navigating claims, disputes, and legal processes.
                             </p>
                         </div>
                     </div>
@@ -79,7 +79,7 @@ const Services = () => {
                         <div className="card-body">
                             <h5 className="card-title">Contract Law</h5>
                             <p className="card-text text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique
+                                We provide expert contract law services, assisting clients with drafting, reviewing, and enforcing contracts to protect their rights and ensure legal compliance.
                             </p>
                         </div>
                     </div>

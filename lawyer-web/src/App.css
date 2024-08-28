@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-/* src/index.css */
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=DM+Serif+Text:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
@@ -17,31 +15,38 @@ body {
   margin: 0;
 }
 
+/* ServicesSection.css */
+.service-card {
+  background-size: cover;
+  background-position: center;
+  height: 120% !important;
+}
+
 .img-fluid-icon {
   filter: contrast(5.5);
   margin-left: -70%;
   width: 60%;
   height: 7vh;
 }
-/* ServicesSection.css */
 
-.service-card {
-  background-size: cover;
-  background-position: center;
-  height: 180%;
-}
+
+
 
 header {
-  /* position: fixed; */
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999;
-  background-color: white;
-  padding: 1rem 2rem;
-  /* Scales padding */
+  border-radius: 20px;
+  margin-left: 5%;
+  width: 90%;
+  background-color: #8e887f75 !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* Add shadow for visibility */
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
 }
 
 .navbar-nav1 {
@@ -51,7 +56,6 @@ header {
 
 .navbar-nav1:hover {
   text-decoration: underline;
-  /* border: 1px solid #FDB813; */
 }
 
 .navbar-nav1:after {
@@ -76,219 +80,78 @@ header {
 .bg-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%),
     url('./components/images/bg5.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* Ensure background doesn't repeat */
-  width: 116%;
-  /* Full width */
-  height: 80vh;
-  /* Full viewport height */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 2.5rem;
-  color: white;
-  box-sizing: border-box;
-  /* Include padding in the element's total width and height */
-  margin: 0;
-  /* Remove margin */
-  margin-top: -11%;
 }
 
-.bg-circle {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  padding: 15vw;
-  /* Use vw for scaling */
-  border-radius: 50%;
+.navbar-nav {
+  margin-left: 50%;
 }
+
+/* Toggler icon styles */
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath stroke="currentColor" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E');
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+}
+
+/* Styles for navbar on small screens */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    /* Adjust as needed */
+    height: 100vh;
+    background-color: #000000d1;
+    /* Dark background for the menu */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .navbar-collapse.show {
+    transform: translateX(0);
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    margin-top: 60px;
+    /* Adjust to move menu items down from the top */
+  }
+
+  .nav-link {
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+/* Adjusting the header when the navbar is open */
+header {
+  position: relative;
+  z-index: 1000;
+}
+
 
 html {
   font-size: 100%;
   /* Default font-size scales with zoom level */
 }
 
-/* Media queries for general responsive design */
-@media (max-width: 1200px) {
-  .bg-image {
-    padding: 2rem;
-    min-height: 45vh;
-    /* Adjust for medium screens */
+/* we responsive  */
+@media (min-width: 985px) and (max-width: 1234px) {
+  .below-3-col {
+    margin-top: 20% !important;
+    margin-bottom: 7% !important;
   }
 
-  .bg-circle {
-    padding: 12vw;
-    /* Smaller circle on medium screens */
-  }
-
-  .service-card .below {
-    margin-top: 10%;
-  }
-
-  .card-body p {
-    margin-bottom: -20% !important;
-  }
 }
 
-@media (max-width: 992px) {
-  header {
-    padding: 1rem;
-    /* Less padding on smaller screens */
-  }
+@media (min-width: 768px) and (max-width: 985px) {
+  .below-3-col {
+    margin-top: 35% !important;
+    margin-bottom: 15% !important;
 
-  .bg-image {
-    padding: 1.5rem;
-    min-height: 40vh;
-    /* Adjust for smaller screens */
-  }
-
-  .bg-circle {
-    padding: 10vw;
-    /* Smaller circle for smaller screens */
-  }
-}
-
-@media (max-width: 768px) {
-  .bg-image {
-    padding: 1rem;
-    min-height: 35vh;
-    /* Adjust for tablets and phones */
-  }
-
-  .bg-circle {
-    padding: 80vw;
-    /* Further scaling down */
-  }
-}
-
-
-/* For very small screens like mobile */
-@media (max-width: 576px) {
-  .bg-image {
-    padding: 0.5rem;
-    min-height: 30vh;
-    /* Adjust for mobile screens */
-  }
-
-  .bg-circle {
-    padding: 6vw;
-    /* Smaller circle for mobile screens */
-  }
-}
-
-/* Specific tweaks for devices with widths between 870px and 1500px */
-@media (min-width: 870px) and (max-width: 1500px) {
-  header {
-    padding: 1rem 1.5rem;
-    /* Adjust header padding */
-  }
-
-  .bg-image {
-    padding: 2rem;
-    min-height: 45vh;
-  }
-
-  .bg-circle {
-    padding: 10vw;
-  }
-}
-
-/* Further refine for screens between 870px and 1200px */
-@media (min-width: 870px) and (max-width: 1200px) {
-  .bg-image {
-    padding: 1.5rem;
-    min-height: 40vh;
-  }
-
-  .bg-circle {
-    padding: 9vw;
-  }
-}
-
-/* Additional adjustments for screens between 1200px and 1500px */
-@media (min-width: 1200px) and (max-width: 1500px) {
-  .bg-image {
-    padding: 2rem;
-    min-height: 48vh;
-  }
-
-  .bg-circle {
-    padding: 10vw;
-  }
-}
-
-@media (min-width: 1053px) and (max-width: 1200px) {
-  .bg-image h1 {
-    font-size: 1.6rem !important;
-  }
-
-  .bg-image p {
-    font-size: 0.9rem !important;
-  }
-
-  .card-body p {
-    margin-bottom: -5% !important;
-  }
-}
-
-@media (min-width: 874px) and (max-width: 1000px) {
-  .bg-image h1 {
-    font-size: 1.6rem !important;
-  }
-
-  .bg-image p {
-    font-size: 0.9rem !important;
-  }
-
-  .card-body p {
-    margin-bottom: -20% !important;
-  }
-}
-
-@media (min-width: 790px) and (max-width: 875px) {
-  .bg-image h1 {
-    font-size: 1.6rem !important;
-  }
-
-  .bg-image p {
-    font-size: 0.9rem !important;
-  }
-
-  .service-card {
-    margin-top: 10%;
-  }
-
-  .service-card .below {
-    margin-top: 10%;
-  }
-
-  .card-body p {
-    margin-bottom: -20% !important;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 790px) {
-  .bg-image h1 {
-    font-size: 1.6rem !important;
-  }
-
-  .bg-image p {
-    font-size: 0.9rem !important;
-  }
-
-  .service-card {
-    margin-top: 10%;
-  }
-
-  .service-card .below {
-    margin-top: 10%;
-  }
-
-  .card-body p {
-    margin-bottom: -45% !important;
   }
 }
 
@@ -353,14 +216,10 @@ html {
     font-size: 0.9rem;
   }
 
-  .input-group {
-    width: 60% !important;
-    margin-left: -8px;
-  }
 
-  .input-group .btn {
-    height: 2.5rem;
-    margin-right: -90px;
+  .below-3-col {
+    margin-top: 0% !important;
+    margin-bottom: -30% !important;
   }
 }
 
@@ -386,8 +245,12 @@ html {
   }
 }
 
-@media (max-width: 367px) {
-  .card-body p {
-    margin-bottom: -40% !important;
+@media (max-width: 420px) {
+  .logo-size {
+    font-size: 0.8rem !important;
+  }
+
+  footer {
+    font-size: 0.6rem !important;
   }
 }

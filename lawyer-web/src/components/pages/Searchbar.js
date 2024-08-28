@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
 
 const Searchbar = () => {
     const [searchInput, setSearchInput] = useState('');
@@ -8,27 +9,31 @@ const Searchbar = () => {
     };
 
     const handleSearch = () => {
-        console.log('Searching for:', searchInput);
-        // Add search logic here
+        if (searchInput.trim() !== '') {
+            const googleSearchURL = `https://www.google.com/search?q=${encodeURIComponent(searchInput)}`;
+            window.open(googleSearchURL, '_blank'); // Open Google search in a new tab
+        }
     };
 
     return (
-        <div className="bg-img-text input-group" style={{ height: '3%', width: '80%', marginLeft: '10%' }}>
-            <input
-                type="text"
-                className="form-control"
-                style={{ border: '1px solid rgb(9, 9, 70)', borderRadius: '6px', height: '3rem' }}
-                placeholder="Search here ..."
-                value={searchInput}
-                onChange={handleInputChange}
-            />
-            <button
-                className="btn btn-success"
-                style={{ marginLeft: '8px', borderRadius: '2px' }}
-                onClick={handleSearch}
-            >
-                Search
-            </button>
+        <div className="container my-4">
+            {/* Custom Search Bar */}
+            <div className="input-group mt-3">
+                <input
+                    type="text"
+                    className="form-control border-primary rounded"
+                    style={{ border: '1px solid rgb(9, 9, 70)', height: '3rem' }}
+                    placeholder="Search here ..."
+                    value={searchInput}
+                    onChange={handleInputChange}
+                />
+                <button
+                    className="btn btn-success ms-2 rounded"
+                    onClick={handleSearch}
+                >
+                    Search
+                </button>
+            </div>
         </div>
     );
 };
