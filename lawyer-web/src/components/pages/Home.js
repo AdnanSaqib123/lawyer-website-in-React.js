@@ -2,6 +2,11 @@ import React from 'react';
 // import image from '../images/bg5.jpg';
 
 const Home = () => {
+    const profiles = [
+        {
+            whatsappLink: 'https://wa.me/your-whatsapp-number'
+        }
+    ];
     return (
         <main id="home" className="flex-grow-1 d-flex justify-content-center py-5 px-5">
             <div className="container d-flex flex-column align-items-center">
@@ -14,7 +19,7 @@ const Home = () => {
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat',
                         width: '116%',
-                        height: '80vh',
+                        height: '90vh',
                         padding: '2.5rem',
                         marginTop: '-11%',
                         boxSizing: 'border-box',
@@ -37,6 +42,11 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            {profiles.map((profile) => (
+                <a href={profile.whatsappLink} className="stickyicon-whtsapp  ">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+            ))}
         </main>
     );
 };

@@ -26,10 +26,12 @@ const Lawyers = () => {
                                 backgroundPosition: 'center',
                                 backgroundRepeat: 'no-repeat',
                                 borderRadius: '50%',
-                                width: '150px'
+                                width: '200px'
                             }} />
                             <p className="text-dark fs-6 fw-medium mt-2 mb-1">Advocate Irfan Ali</p>
                             <p className="text-muted fs-6">Business Law</p>
+                            <a className='icons-bt' href="#"><i class="bi bi-envelope-at"></i></a> &nbsp;&nbsp;
+                            <a className='icons-bt' href="#"><i class="bi bi-whatsapp"></i></a>
                         </div>
                         <div className="col text-center">
                             <div className="ratio ratio-1x1 bg-circle mx-auto" style={{ 
@@ -38,10 +40,12 @@ const Lawyers = () => {
                                 backgroundPosition: 'center',
                                 backgroundRepeat: 'no-repeat',
                                 borderRadius: '50%',
-                                width: '150px'
+                                width: '200px'
                             }} />
                             <p className="text-dark fs-6 fw-medium mt-2 mb-1">Advocate Khurram</p>
                             <p className="text-muted fs-6">Criminal Law</p>
+                            <a className='icons-bt' href="#"><i class="bi bi-envelope-at"></i></a> &nbsp;&nbsp;
+                            <a className='icons-bt' href="#"><i class="bi bi-whatsapp"></i></a>
                         </div>
                         <div className="col text-center">
                             <div className="ratio ratio-1x1 bg-circle mx-auto" style={{ 
@@ -50,10 +54,12 @@ const Lawyers = () => {
                                 backgroundPosition: 'center',
                                 backgroundRepeat: 'no-repeat',
                                 borderRadius: '50%',
-                                width: '150px'
+                                width: '200px'
                             }} />
                             <p className="text-dark fs-6 fw-medium mt-2 mb-1">Advocate Kashif</p>
                             <p className="text-muted fs-6">Family Law</p>
+                            <a className='icons-bt' href="#"><i class="bi bi-envelope-at"></i></a> &nbsp;&nbsp;
+                            <a className='icons-bt' href="#"><i class="bi bi-whatsapp"></i></a>
                         </div>
                         <div className="col text-center">
                             <div className="ratio ratio-1x1 bg-circle mx-auto" style={{ 
@@ -62,10 +68,12 @@ const Lawyers = () => {
                                 backgroundPosition: 'center',
                                 backgroundRepeat: 'no-repeat',
                                 borderRadius: '50%',
-                                width: '150px'
+                                width: '200px'
                             }} />
                             <p className="text-dark fs-6 fw-medium mt-2 mb-1">Advocate Ahmed</p>
                             <p className="text-muted fs-6">Real Estate Law</p>
+                            <a className='icons-bt' href="#"><i class="bi bi-envelope-at"></i></a> &nbsp;&nbsp;
+                            <a className='icons-bt' href="#"><i class="bi bi-whatsapp"></i></a>
                         </div>
                     </div>
                 </div>

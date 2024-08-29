@@ -30,8 +30,6 @@ body {
 }
 
 
-
-
 header {
   position: relative;
   top: 0;
@@ -82,8 +80,21 @@ header {
     url('./components/images/bg5.jpg');
 }
 
+.stickyicon-whtsapp {
+  position: fixed;
+  font-size: 2rem;
+  margin-left: 85%;
+  margin-top: 37%;
+  color: rgb(5, 77, 5);
+  transition: transform 0.3s ease;
+}
+
+.stickyicon-whtsapp:hover {
+  transform: scale(1.1);
+}
+
 .navbar-nav {
-  margin-left: 50%;
+  margin-left: 40%;
 }
 
 /* Toggler icon styles */
@@ -91,6 +102,16 @@ header {
   background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath stroke="currentColor" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E');
   background-size: 1.5rem;
   background-repeat: no-repeat;
+}
+
+.icons-bt:hover {
+  color: red;
+}
+
+.send-bt:hover {
+  background-color: #1e4b57;
+  transition: all 0.34s ease-in;
+  transform: translateY(-5px);
 }
 
 /* Styles for navbar on small screens */
@@ -124,6 +145,10 @@ header {
     padding: 1rem;
     text-align: center;
   }
+
+  .bg-circle {
+    width: 150px !important;
+  }
 }
 
 /* Adjusting the header when the navbar is open */
@@ -139,10 +164,146 @@ html {
 }
 
 /* we responsive  */
+@media (min-width: 1600px) and (max-width: 1750px) {
+  .navbar-nav {
+    margin-left: 55%;
+  }
+
+  .head-nav1 {
+    margin-left: 8% !important;
+    width: 84%;
+
+  }
+}
+
+@media (min-width: 1500px) and (max-width: 1600px) {
+  .navbar-nav {
+    margin-left: 53%;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1500px) {
+  .navbar-nav {
+    margin-left: 48%;
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1400px) {
+  .navbar-nav {
+    margin-left: 45%;
+  }
+}
+
+@media (min-width: 1140px) and (max-width: 1200px) {
+  .navbar-nav {
+    margin-left: 35%;
+  }
+}
+
+@media (min-width: 1055px) and (max-width: 1140px) {
+  .navbar-nav {
+    margin-left: 28%;
+  }
+}
+
+@media (min-width: 990px) and (max-width: 1055px) {
+  .navbar-nav {
+    margin-left: 20%;
+  }
+}
+
 @media (min-width: 985px) and (max-width: 1234px) {
   .below-3-col {
     margin-top: 20% !important;
     margin-bottom: 7% !important;
+  }
+
+}
+
+@media (min-width: 800px) and (max-width: 991px) {
+  .head-nav1 {
+    margin-left: 10% !important;
+    width: 80%;
+  }
+}
+
+@media (min-width: 690px) and (max-width: 768px) {
+  .head-nav1 {
+    margin-left: 15% !important;
+    width: 70%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 690px) {
+  .head-nav1 {
+    margin-left: 11% !important;
+    width: 77%;
+  }
+
+  .stickyicon-whtsapp {
+    margin-top: 97%;
+    margin-left: 70% !important;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+  .head-nav1 {
+    margin-top: 1%;
+    margin-left: 12% !important;
+    width: 74%;
+  }
+
+  .stickyicon-whtsapp {
+    margin-top: 97%;
+    margin-left: 70% !important;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+  .head-nav1 {
+    margin-top: 4%;
+    margin-left: 12% !important;
+    width: 74%;
+  }
+
+  .logo-size {
+    margin-left: -7%;
+  }
+
+
+}
+
+@media (min-width: 378px) and (max-width: 420px) {
+  .stickyicon-whtsapp {
+    margin-top: 116%;
+    margin-left: 70% !important;
+  }
+
+}
+
+@media (min-width: 300px) and (max-width: 400px) {
+  .head-nav1 {
+    margin-top: 6%;
+    margin-left: 15% !important;
+    width: 70%;
+  }
+
+  .logo-size {
+    margin-left: -20%;
+    width: 23% !important;
+  }
+
+  .logo-text {
+    font-size: 1rem !important;
+  }
+
+
+}
+
+@media (min-width: 300px) and (max-width: 378px) {
+  .stickyicon-whtsapp {
+    margin-top: 135%;
+    margin-left: 60% !important;
   }
 
 }
@@ -246,9 +407,6 @@ html {
 }
 
 @media (max-width: 420px) {
-  .logo-size {
-    font-size: 0.8rem !important;
-  }
 
   footer {
     font-size: 0.6rem !important;

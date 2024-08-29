@@ -2,6 +2,7 @@ import React from 'react';
 import Icon from './images/icon1.png'; // Ensure this path is correct
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min'; // Ensure Bootstrap JS is included
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -9,12 +10,12 @@ const Header = () => {
             backgroundColor: 'rgba(0, 0, 0, 0.2)',
             color: 'white',
             fontFamily: 'Baskervville SC, serif',
-            position: 'relative',
+            position: 'absolute',
             zIndex: 1000,
         }}>
             <div className=" logo-size d-flex align-items-center gap-3">
                 <img className="img-fluid" src={Icon} alt="Icon" width="40" height="40" />
-                <h2 className="fs-5 fw-bold mb-0" style={{ letterSpacing: '0.1rem' }}>
+                <h2 className="logo-text fs-5 fw-bold mb-0" style={{ letterSpacing: '0.1rem' }}>
                     Justice Shield
                 </h2>
             </div>
@@ -28,19 +29,25 @@ const Header = () => {
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav d-lg-flex justify-content-end gap-4">
                     <li className="nav-item">
-                        <a className="nav-link navbar-nav1 text-decoration-none fs-6 fw-bold" href="#home">Home</a>
+                        <NavLink className="nav-link navbar-nav1 text-decoration-none fs-6 fw-bold" to="/">Home</NavLink>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link navbar-nav1 text-decoration-none fs-6 fw-bold" href="#services">Services</a>
+                        <NavLink className="nav-link navbar-nav1 text-decoration-none fs-6 fw-bold" to="/services">Services</NavLink>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link navbar-nav1 text-decoration-none fs-6 fw-bold" href="#lawyers">Lawyers</a>
+                        <NavLink className="nav-link navbar-nav1 text-decoration-none fs-6 fw-bold" to="/lawyers">Lawyers</NavLink>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link navbar-nav1 text-decoration-none fs-6 fw-bold" href="#about">About</a>
+                        <NavLink className="nav-link navbar-nav1 text-decoration-none fs-6 fw-bold" to="/about">About</NavLink>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link navbar-nav1 text-decoration-none fs-6 fw-bold" href="#contact">Contact</a>
+                        <NavLink className="nav-link navbar-nav1 text-decoration-none fs-6 fw-bold" to="/contact">Contact</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link navbar-nav1 text-decoration-none fs-6 fw-bold btn btn-secondary" to="/login">Login</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link navbar-nav1 text-decoration-none fs-6 fw-bold btn btn-secondary" to="/signup">Signup</NavLink>
                     </li>
                 </ul>
             </div>

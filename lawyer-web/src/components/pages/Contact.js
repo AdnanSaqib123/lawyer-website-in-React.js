@@ -29,7 +29,7 @@ const Contact = () => {
                             <div className="form-group mb-3">
                                 <textarea className="form-control" rows="5" placeholder="Message" required></textarea>
                             </div>
-                            <button type="submit" className="btn btn-primary d-block mx-auto">
+                            <button type="submit" className="send-bt btn btn-primary d-block mx-auto">
                                 Send Message
                             </button>
                         </form>
