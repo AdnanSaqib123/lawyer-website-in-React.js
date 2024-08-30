@@ -1,36 +1,45 @@
-import React from 'react'
+import React from 'react';
+import { Modal, Button, Form } from 'react-bootstrap';
 
-const Login = () => {
+const Login = ({ show, handleClose, handleShowSignup }) => {
     return (
-        <div className="container " style={{ marginTop: '10%', marginBottom: '5%' }}>
-            <div className="row justify-content-center">
-                <h2 className="text-center mb-4" style={{ fontFamily: 'Baskervville SC, serif', fontSize: '2.7rem' }}>Login</h2>
-                <div className="col-lg-5 col-md-7">
-                    <div className="card shadow-sm">
-                        <div className="card-body">
-                            <form>
-                                <div className="mb-3">
-                                    <label htmlFor="email" className="form-label">Email address</label>
-                                    <input type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" />
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="password" className="form-label">Password</label>
-                                    <input type="password" className="form-control" id="password" placeholder="Enter Password" />
-                                </div>
-                                <button type="submit" className="btn btn-primary">Login</button>
-                            </form>
-                            <div className="text-center mt-3">
-                                Don't have an account? <a href="/signup">Sign up</a>
-                            </div>
-                            <div className="text-center mt-2">
-                                <a href="/forget-password">Forget your password?</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
+        <Modal show={show} onHide={handleClose} centered>
+            <Modal.Header closeButton>
+                <Modal.Title>Login</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <Form>
+                    <Form.Group controlId="formBasicEmail">
+                        <Form.Label>Username</Form.Label>
+                        <Form.Control type="text" placeholder="Enter Username" required />
+                    </Form.Group>
 
-export default Login
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" placeholder="Enter Password" required />
+                    </Form.Group>
+
+                    <Form.Group controlId="formBasicCheckbox">
+                        <Form.Check type="checkbox" label="Remember me" />
+                    </Form.Group>
+
+                    <Button variant="primary" type="submit" className="w-100 mb-2 mt-3">
+                        Login
+                    </Button>
+                </Form>
+
+                <div className="text-center">
+                    <p>Don't have an account? <a href="#" onClick={() => { handleClose(); handleShowSignup(); }}>Sign up</a></p>
+                </div>
+            </Modal.Body>
+            <Modal.Footer>
+                <Button variant="secondary" className="me-auto" onClick={handleClose}>
+                    Cancel
+                </Button>
+                <span className="psw">Forgot <a href="#">password?</a></span>
+            </Modal.Footer>
+        </Modal>
+    );
+};
+
+export default Login;

@@ -75,22 +75,31 @@ header {
   /* Scale on hover */
 }
 
+.buttons2:hover {
+  background: none;
+}
+
 .bg-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%),
     url('./components/images/bg5.jpg');
 }
 
-.stickyicon-whtsapp {
-  position: fixed;
-  font-size: 2rem;
-  margin-left: 85%;
-  margin-top: 37%;
+.icon-whtsapp {
+  font-size: 1.5rem;
   color: rgb(5, 77, 5);
-  transition: transform 0.3s ease;
 }
 
-.stickyicon-whtsapp:hover {
-  transform: scale(1.1);
+.icon-mail {
+  font-size: 1.5rem;
+  color: rgb(185, 182, 9);
+}
+
+.icon-whtsapp:hover {
+  color: red;
+}
+
+.icon-mail:hover {
+  color: red;
 }
 
 .navbar-nav {
@@ -104,9 +113,6 @@ header {
   background-repeat: no-repeat;
 }
 
-.icons-bt:hover {
-  color: red;
-}
 
 .send-bt:hover {
   background-color: #1e4b57;
@@ -148,6 +154,10 @@ header {
 
   .bg-circle {
     width: 150px !important;
+  }
+
+  .buttons2 {
+    margin-left: 20%;
   }
 }
 
@@ -273,13 +283,6 @@ html {
 
 }
 
-@media (min-width: 378px) and (max-width: 420px) {
-  .stickyicon-whtsapp {
-    margin-top: 116%;
-    margin-left: 70% !important;
-  }
-
-}
 
 @media (min-width: 300px) and (max-width: 400px) {
   .head-nav1 {

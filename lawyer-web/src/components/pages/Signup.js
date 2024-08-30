@@ -1,52 +1,66 @@
-import React from 'react'
+import React from 'react';
+import { Modal, Button, Form } from 'react-bootstrap';
 
-const Signup = () => {
+const Signup = ({ show, handleClose, handleShowLogin }) => {
     return (
+        <Modal show={show} onHide={handleClose} centered>
+            <Modal.Header closeButton>
+                <Modal.Title>Sign Up</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <Button variant="outline-danger" className="w-100 mb-3">
+                    Continue with Google
+                </Button>
 
-        <div className="container" style={{ marginTop: '10%', marginBottom: '2%' }}>
-            <div className="row justify-content-center">
-                <div className="col-md-5">
-                    <h2 className="text-center mb-4" style={{ fontFamily: 'Baskervville SC, serif',fontSize: '2.7rem' }}>Sign Up</h2>
-                    <div className="card p-4">
-                        <div className="card-body">
-                            <form>
-                                <div className="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" className="form-control" id="name" placeholder="Enter name" />
-                                </div>
-                                <div className="form-group">
-                                    <label for="email">Email address</label>
-                                    <input type="email" className="form-control" id="email" placeholder="Enter email" />
-                                </div>
-                                <div className="form-group">
-                                    <label for="password">Password</label>
-                                    <input type="password" className="form-control" id="password" placeholder="Enter password" />
-                                </div>
-                                <div className="form-group">
-                                    <label for="password2">Confirm Password</label>
-                                    <input type="password" className="form-control" id="password2" placeholder="Enter password again" />
-                                </div>
-                                <div className="text-center mt-4">
-                                    <p className="text-muted">Already a member? <a href="/login">Login</a></p>
-                                    <button type="submit" className="btn btn-primary w-100">Sign Up</button>
-                                </div>
-                                <hr />
-                                <div className="text-center">
-                                    <button type="button" className="btn btn-light w-100">
-                                        <i className="bi bi-google me-2"></i> Continue with Google
-                                    </button>
-                                    <button type="button" className="btn btn-primary w-100 mt-2">
-                                        <i className="bi bi-facebook me-2"></i> Continue with Facebook
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
+                <p className="text-center">Or</p>
+
+                <Form>
+                    <Form.Group controlId="formName">
+                        <Form.Label>Name</Form.Label>
+                        <Form.Control type="text" placeholder="Enter Name" required />
+                    </Form.Group>
+
+                    <Form.Group controlId="formEmail">
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control type="email" placeholder="Enter email" required />
+                    </Form.Group>
+
+                    <Form.Group controlId="formPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" placeholder="Enter Password" required />
+                    </Form.Group>
+
+                    <Form.Group controlId="formPasswordRepeat">
+                        <Form.Label>Repeat Password</Form.Label>
+                        <Form.Control type="password" placeholder="Repeat Password" required />
+                    </Form.Group>
+
+                    <Form.Group controlId="formBasicCheckbox">
+                        <Form.Check type="checkbox" label="Remember me"  />
+                    </Form.Group>
+
+                    <p>
+                        By creating an account, you agree to our{' '}
+                        <a href="#" style={{ color: 'dodgerblue' }}>
+                            Terms & Privacy
+                        </a>.
+                    </p>
+                    <p className="text-center">
+                        Already a member? <a href="#" onClick={() => { handleClose(); handleShowLogin(); }}>Login</a>
+                    </p>
+
+                    <div className="d-flex justify-content-between">
+                        <Button variant="secondary" onClick={handleClose}>
+                            Cancel
+                        </Button>
+                        <Button variant="success" type="submit">
+                            Sign Up
+                        </Button>
                     </div>
-                </div>
-            </div>
-        </div>
+                </Form>
+            </Modal.Body>
+        </Modal>
+    );
+};
 
-    )
-}
-
-export default Signup
+export default Signup;

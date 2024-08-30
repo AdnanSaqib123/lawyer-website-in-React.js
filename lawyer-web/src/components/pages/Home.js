@@ -42,11 +42,6 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            {profiles.map((profile) => (
-                <a href={profile.whatsappLink} className="stickyicon-whtsapp  ">
-                    <i class="bi bi-whatsapp"></i>
-                </a>
-            ))}
         </main>
     );
 };
