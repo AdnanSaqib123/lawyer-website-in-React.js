@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/lawyer-website-in-React.js/static/css/main.f6dfb87a.css",
+    "main.js": "/lawyer-website-in-React.js/static/js/main.33dacdc7.js",
+    "static/js/453.5829c612.chunk.js": "/lawyer-website-in-React.js/static/js/453.5829c612.chunk.js",
+    "static/media/bg5.jpg": "/lawyer-website-in-React.js/static/media/bg5.ee5431351c774eb7b860.jpg",
+    "static/media/boxicons.svg": "/lawyer-website-in-React.js/static/media/boxicons.9e2b21b135bc7d4c803f.svg",
+    "static/media/lawyer2.jpg": "/lawyer-website-in-React.js/static/media/lawyer2.5c273e07a1d9bda10431.jpg",
+    "static/media/boxicons.eot": "/lawyer-website-in-React.js/static/media/boxicons.65a8ce52fc5427e8f94d.eot",
+    "static/media/boxicons.woff": "/lawyer-website-in-React.js/static/media/boxicons.d12afc36557395143e4b.woff",
+    "static/media/boxicons.ttf": "/lawyer-website-in-React.js/static/media/boxicons.db9ddb1898dbd76badca.ttf",
+    "static/media/lawyer3.jpg": "/lawyer-website-in-React.js/static/media/lawyer3.df8ee1f5230e0aa41689.jpg",
+    "static/media/bootstrap-icons.woff?": "/lawyer-website-in-React.js/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/lawyer-website-in-React.js/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "static/media/boxicons.woff2": "/lawyer-website-in-React.js/static/media/boxicons.df635aaf04cd75132f62.woff2",
+    "index.html": "/lawyer-website-in-React.js/index.html",
+    "main.f6dfb87a.css.map": "/lawyer-website-in-React.js/static/css/main.f6dfb87a.css.map",
+    "main.33dacdc7.js.map": "/lawyer-website-in-React.js/static/js/main.33dacdc7.js.map",
+    "453.5829c612.chunk.js.map": "/lawyer-website-in-React.js/static/js/453.5829c612.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6dfb87a.css",
+    "static/js/main.33dacdc7.js"
+  ]
+}
